@@ -5,6 +5,73 @@ $topbar-border: 1px solid transparentize(darken($mint, 10%), 0.25);
 html,body{
   font-family:"微软雅黑";
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; //关于解决输入框背景颜色
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right
+}
+
+.text-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.motify{
+    display: none;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    width: 220px;
+    padding: 0;
+    margin: 0 0 0 -110px;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.motify .motify-inner {
+    padding: 10px 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.motify p {
+    margin: 0 0 5px;
+}
+
+.motify p:last-of-type {
+    margin-bottom: 0;
+}
 
 
 .topbar {
@@ -247,4 +314,158 @@ html,body{
       }
     }
   }
+}
+
+
+//login2
+.login-top-new {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    background: #fff;
+    .content-auto {
+        margin: 0 auto;
+        width: 1200px;
+        height: 80px;
+        img {
+            margin-top: 12px;
+            margin-left: 20px;
+        }
+    }
+}
+
+.login-content-box {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    .content-auto {
+        margin: 0 auto;
+        width: 1200px;
+        padding: 139px 50px 0;
+    }
+    .login-right-box {
+        margin-top: 33px;
+        width: 314px;
+        height: 416px;
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0px 0px 30px #349ff8;
+        padding-top: 40px;
+        position: relative;
+        .login_link {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            background: #464553;
+            color: #90909c;
+            font-size: 12px;
+            border-radius: 0 0 4px 4px;
+            a {
+                color: #f5f5f5;
+                transition: all .2s;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .login_input {
+            width: 254px;
+            height: 36px;
+            line-height: 36px;
+            margin: 0 auto 40px;
+            position: relative;
+            border-bottom: 1px solid #bfbfbf;
+            .login_icon {
+                height: 23px;
+                position: absolute;
+                left: 0px;
+                top: 6px;
+                z-index: 4;
+            }
+            .login_vcode {
+                position: absolute;
+                right: 0px;
+                top: 4px;
+                width: 60px;
+                height: 28px;
+                background:#ff4d37;
+                color: #fff;
+                text-align:center;
+                line-height:28px;
+                font-size:14px;
+                letter-spacing:4px;
+                cursor:pointer;
+            }
+            .login_text {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 0;
+                outline: none;
+                padding-left: 46px;
+                font-size: 16px;
+                color: #808080;
+                font-family: "Microsoft YaHei";
+      
+                &:focus {
+                    color: #000;
+                }
+            }
+        }
+        .login_rember {
+            margin: -14px auto 27px;
+            width: 254px;
+            font-family: "Microsoft YaHei";
+            line-height: 20px;
+            color: #ff5636;
+            .login_check {
+                width: 16px;
+                height: 15px;
+                margin-top: 2px;
+                transition: all .2s;
+                background: url(../images/login/Checked.png) 0 0 no-repeat;
+                &.active {
+                    background: url(../images/login/Checked-on.png) 0 0 no-repeat;
+                }
+            }
+            .rember {
+                margin-left: 14px;
+            }
+            a {
+                color: #808080;
+                transition: all .2s;
+                &:hover {
+                    color: #ff5636;
+                }
+            }
+        }
+        .login_btn {
+            margin: 0 auto;
+            background: #1a9af3;
+            width: 252px;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #fff;
+            font-family: "Microsoft YaHei";
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            border: 0;
+            outline: none;
+            transition: all .2s;
+            &:hover {
+                box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(0, 0, 0, 0), 0px 5px 5px #b9e0fb, 0px 0px 0px rgba(0, 0, 0, 0);
+            }
+        }
+    }
 }

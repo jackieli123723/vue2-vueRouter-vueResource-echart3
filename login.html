@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Admin Template</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700|Source+Sans+Pro:300,400" rel="stylesheet">
+    <title>vue2+vueRouter+vueResource+echart3</title>
+     <!-- css icon -->
     <script src="https://use.fontawesome.com/efc745f1cc.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/styles.css">
 
   </head>
-  <body>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login</h2>
+  <body style="overflow:hidden">
+      <img src="images/login/griddingBg.png" class="login_img_bg" />
+      <div class="login-top-new">
+          <div class="content-auto">
+              <img src="images/login/logo.png" />
+          </div>
       </div>
-    </div>
-  </div>
+      <div class="login-content-box">
+          <div class="content-auto clearfix">
+              <div class="fl">
+                  <img src="images/login/1ogin2.0_07.png" />
+              </div>
+              <div class="fr">
+                  <div class="login-right-box">
+                      <div class="login_input">
+                          <img src="images/login/user.png" class="login_icon" />
+                          <input class="login_text" type="text" id="user" value="" autocomplete="off" placeholder="用户名" />
+                      </div>
+                      <div class="login_input">
+                          <img src="images/login/key.png" class="login_icon" />
+                          <input class="login_text" type="password" id="pwd" value="" autocomplete="off" placeholder="密码" />
+                      </div>
+                      <div class="login_input">
+                          <img src="images/login/yanzheng.png" class="login_icon" />
+                          <input class="login_text" type="text" id="code" value="" autocomplete="off" placeholder="验证码" maxlength="4" />
+                          <div class="login_vcode"></div>
+                      </div>
+                      <div class="login_rember clearfix">
+                          <span class="login_check fl"></span><span class="fl rember">记住密码</span><a href="#" class="fr">忘记密码</a>
+                      </div>
+                      <span class="login_btn" id="btn-submit">登录</span>
 
-  <!-- /view -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script>
-
-  </script>
-</body>
+                      <div class="login_link ">
+                        还没有账号，<a href="#">立即注册</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <script src="js/jquery.1.12.4.min.js"></script>
+      <script src="js/login.js"></script>
+  </body>
 </html>

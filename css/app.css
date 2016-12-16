@@ -227,6 +227,14 @@ input:-webkit-autofill {
         color: #434343;
         text-shadow: 0px 0px 10px silver; }
 
+.move-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent; }
+
 .login-top-new {
   position: fixed;
   left: 0;

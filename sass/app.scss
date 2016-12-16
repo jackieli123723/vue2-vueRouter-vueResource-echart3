@@ -317,6 +317,15 @@ input:-webkit-autofill {
 }
 
 
+.move-bg{
+   position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom:0;
+    background:transparent;
+}
+
 //login2
 .login-top-new {
     position: fixed;

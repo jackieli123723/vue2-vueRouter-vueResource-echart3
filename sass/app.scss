@@ -1,0 +1,250 @@
+@import "bootstrap/variables";
+
+$mint: #f67156;
+$topbar-border: 1px solid transparentize(darken($mint, 10%), 0.25);
+html,body{
+  font-family:"微软雅黑";
+}
+
+
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: $mint;
+
+  .logo {
+    float: left;
+    width: 220px;
+    height: 50px;
+    border-right: 1px solid transparentize(darken($mint, 10%), 0.25%);
+  }
+
+  .search {
+    float: left;
+    color: lighten($mint, 40%);
+    margin: 7px 15px;
+
+    input[type="search"] {
+      background-color: transparent;
+      color: lighten($mint, 40%);
+      text-align: left;
+      font-size: 1.3em;
+      border: none;
+
+      height: 35px;
+
+      &::-webkit-input-placeholder {
+        color: lighten($mint, 40%);
+      }
+
+      &:-moz-input-placeholder { /* Firefox 18- */
+        color: lighten($mint, 40%);
+      }
+
+      &::-moz-input-placeholder { /* Firefox 19+ */
+        color: lighten($mint, 40%);
+      }
+
+      &:-ms-input-placeholder {
+        color: lighten($mint, 40%);
+      }
+    }
+
+    &>i {
+      margin-right: 15px;
+    }
+  }
+
+  .settings {
+    height: 50px;
+    float: right;
+    margin-right: 50px;
+
+    .notifications {
+      float: right;
+      height: 50px;
+      padding: 15px 15px;
+      vertical-align: middle;
+      border-left: 1px solid transparentize(darken($mint, 10%), 0.25);
+      i {
+        color: white;
+      }
+
+      &:hover {
+        background-color: lighten($mint, 40%);
+        i {
+          color: $gray-dark;
+        }
+      }
+    }
+    .account-wrapper {
+      position: relative;
+      float: right;
+      &:hover { // hover to activate menu
+        background-color: lighten($mint, 40%);
+        a {
+          color: $gray-dark;
+
+        }
+        .account#my-account-link:after {
+          content: '\f0d7';
+          font-size: 14px;
+          padding-left: 5px;
+          color: $gray-dark;
+          font-family: "FontAwesome";
+        } // end of #my-account-link:after
+
+        .account-dropdown {
+          display: block;
+        }
+      } // end of hover action
+    } // end of .account-wrapper
+    .account {
+      position: relative;
+      height: 50px;
+      color: white;
+      padding: 14px;
+      border-left: $topbar-border;
+      border-right: $topbar-border;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      #my-account-link:after {
+        content: '\f0d7';
+        font-size: 14px;
+        padding-left: 5px;
+        font-family: "FontAwesome";
+      } // end of #my-account-link:after
+    } // end of .account
+
+    .account-dropdown {
+      position: absolute;
+      display: none;
+      top: 100%;
+      right: 0%;
+      border-right: $topbar-border;
+      border-left: $topbar-border;
+      border-bottom: $topbar-border;
+      padding: 0;
+      margin: 0;
+
+      box-shadow: 0px 5px 5px darken($gray-lighter, 5%);
+
+      &>ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: lighten($mint, 40%);
+        width: 200px;
+
+        &>li {
+          padding: 10px 10px;
+          text-align: left;
+          i {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+          a {
+            color: $gray-dark;
+            text-decoration: none;
+          }
+
+          &:hover {
+            background: lighten($mint, 30%);
+          }
+        }
+      }
+    } // end of .account-dropdown
+  } // end of settings
+} // end of topbar
+
+.sidebar {
+  top: 50;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #5e6977;
+  border-right:1px solid #242b33;
+  position: fixed;
+
+  .user-heading {
+    padding: 30px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+
+    img {
+      margin-left: 20px;
+      float: left;
+    }
+    h4 {
+      margin-left: 15px;
+      margin-top: 15px;
+      float: left;
+      color: #fff;
+    }
+  }
+
+  nav.navigation {
+
+    ul.side-menu {
+      padding-left: 0px;
+      list-style-type: none;
+    }
+
+    li.menu-item {
+      list-style: none;
+      padding: 15px 0px 15px 30px;
+      margin: 10px 0px;
+
+      &:hover {
+        background-color: #4d5968;
+      }
+
+      &.active {
+        background-color: #4d5968;
+
+        a {
+          color: #ff4d37;
+          font-weight: 700;
+          display:block;
+          height:100%;
+        }
+      }
+
+      a {
+        color: #fff;
+              display:block;
+          height:100%;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  .logout {
+    width: 220px;
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    left: 0px;
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        color: #434343;
+        text-shadow: 0px 0px 10px lighten(#808080, 25%);
+      }
+    }
+  }
+}

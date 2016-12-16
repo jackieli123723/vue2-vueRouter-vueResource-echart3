@@ -1,0 +1,170 @@
+@charset "UTF-8";
+html, body {
+  font-family: "微软雅黑"; }
+
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: #f67156; }
+  .topbar .logo {
+    float: left;
+    width: 220px;
+    height: 50px;
+    border-right: 1px solid rgba(243, 72, 38, 0.75); }
+  .topbar .search {
+    float: left;
+    color: white;
+    margin: 7px 15px; }
+    .topbar .search input[type="search"] {
+      background-color: transparent;
+      color: white;
+      text-align: left;
+      font-size: 1.3em;
+      border: none;
+      height: 35px; }
+      .topbar .search input[type="search"]::-webkit-input-placeholder {
+        color: white; }
+      .topbar .search input[type="search"]:-moz-input-placeholder {
+        /* Firefox 18- */
+        color: white; }
+      .topbar .search input[type="search"]::-moz-input-placeholder {
+        /* Firefox 19+ */
+        color: white; }
+      .topbar .search input[type="search"]:-ms-input-placeholder {
+        color: white; }
+    .topbar .search > i {
+      margin-right: 15px; }
+  .topbar .settings {
+    height: 50px;
+    float: right;
+    margin-right: 50px; }
+    .topbar .settings .notifications {
+      float: right;
+      height: 50px;
+      padding: 15px 15px;
+      vertical-align: middle;
+      border-left: 1px solid rgba(243, 72, 38, 0.75); }
+      .topbar .settings .notifications i {
+        color: white; }
+      .topbar .settings .notifications:hover {
+        background-color: white; }
+        .topbar .settings .notifications:hover i {
+          color: #333333; }
+    .topbar .settings .account-wrapper {
+      position: relative;
+      float: right; }
+      .topbar .settings .account-wrapper:hover {
+        background-color: white; }
+        .topbar .settings .account-wrapper:hover a {
+          color: #333333; }
+        .topbar .settings .account-wrapper:hover .account#my-account-link:after {
+          content: '\f0d7';
+          font-size: 14px;
+          padding-left: 5px;
+          color: #333333;
+          font-family: "FontAwesome"; }
+        .topbar .settings .account-wrapper:hover .account-dropdown {
+          display: block; }
+    .topbar .settings .account {
+      position: relative;
+      height: 50px;
+      color: white;
+      padding: 14px;
+      border-left: 1px solid rgba(243, 72, 38, 0.75);
+      border-right: 1px solid rgba(243, 72, 38, 0.75); }
+      .topbar .settings .account a {
+        color: white;
+        text-decoration: none; }
+      .topbar .settings .account #my-account-link:after {
+        content: '\f0d7';
+        font-size: 14px;
+        padding-left: 5px;
+        font-family: "FontAwesome"; }
+    .topbar .settings .account-dropdown {
+      position: absolute;
+      display: none;
+      top: 100%;
+      right: 0%;
+      border-right: 1px solid rgba(243, 72, 38, 0.75);
+      border-left: 1px solid rgba(243, 72, 38, 0.75);
+      border-bottom: 1px solid rgba(243, 72, 38, 0.75);
+      padding: 0;
+      margin: 0;
+      box-shadow: 0px 5px 5px #e2e2e2; }
+      .topbar .settings .account-dropdown > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        width: 200px; }
+        .topbar .settings .account-dropdown > ul > li {
+          padding: 10px 10px;
+          text-align: left; }
+          .topbar .settings .account-dropdown > ul > li i {
+            margin-left: 10px;
+            margin-right: 10px; }
+          .topbar .settings .account-dropdown > ul > li a {
+            color: #333333;
+            text-decoration: none; }
+          .topbar .settings .account-dropdown > ul > li:hover {
+            background: #feebe7; }
+
+.sidebar {
+  top: 50;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #5e6977;
+  border-right: 1px solid #242b33;
+  position: fixed; }
+  .sidebar .user-heading {
+    padding: 30px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center; }
+    .sidebar .user-heading img {
+      margin-left: 20px;
+      float: left; }
+    .sidebar .user-heading h4 {
+      margin-left: 15px;
+      margin-top: 15px;
+      float: left;
+      color: #fff; }
+  .sidebar nav.navigation ul.side-menu {
+    padding-left: 0px;
+    list-style-type: none; }
+  .sidebar nav.navigation li.menu-item {
+    list-style: none;
+    padding: 15px 0px 15px 30px;
+    margin: 10px 0px; }
+    .sidebar nav.navigation li.menu-item:hover {
+      background-color: #4d5968; }
+    .sidebar nav.navigation li.menu-item.active {
+      background-color: #4d5968; }
+      .sidebar nav.navigation li.menu-item.active a {
+        color: #ff4d37;
+        font-weight: 700;
+        display: block;
+        height: 100%; }
+    .sidebar nav.navigation li.menu-item a {
+      color: #fff;
+      display: block;
+      height: 100%;
+      text-transform: uppercase;
+      text-decoration: none; }
+    .sidebar nav.navigation li.menu-item i {
+      margin-right: 10px; }
+  .sidebar .logout {
+    width: 220px;
+    text-align: center;
+    position: fixed;
+    bottom: 25px;
+    left: 0px; }
+    .sidebar .logout a {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+      .sidebar .logout a:hover {
+        color: #434343;
+        text-shadow: 0px 0px 10px silver; }

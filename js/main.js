@@ -19,8 +19,9 @@ $(function() {
     var isLogin = localStorage.getItem("isLogin")
     function isLoginCheck() {
         if (!isLogin) {
-            alert("你还没有登录")
-            window.location.href = "login.html";
+            $("#loginBtn").trigger('click')
+            $("#myModal").off("click")
+          
         }
     }
     isLoginCheck()
@@ -28,6 +29,10 @@ $(function() {
     $(".logout-button,.fa-power-off").on("click", function() {
         localStorage.removeItem("isLogin");
         window.location.href = "login.html";
+    })
+
+    $(".go-login").on("click",function(){
+          window.location.href = "login.html";
     })
 
 

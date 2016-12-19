@@ -1,17 +1,12 @@
-# Modern Admin Template
+# SimonAdmin--西门互联
 
-This project is a work in progress. My goal is to make an admin template that looks and works good, that doesn't cost a penny. A good template should be free and open source. That is what this project seeks to accomplish.
-
-## Contributions
-
-If you would like to make contributions, I will consider them at a future time. They can be made as a Merge Request.
-
-## Issues
-
-Please use the issues tracker to submit bugs and issues.
+个人后台项目
 
 ## Contact
 
-**Twitter:** [@_jacurtis](http://twitter.com/_jacurtis
+**Email:** 380863274@qq.com
 
-**Email:** hello@devmarketer.io
+### 功能
+- [x] md5用户名密码登录加密
+- [x] 兼容支持localStorage 现代浏览器
+

@@ -168,11 +168,11 @@ window.onload = window.onresize = function() {
       createCode();
   })
 
-          
-   var userName = localStorage.setItem("userName","lilidong");  
-   var passWord = localStorage.setItem("passWord","lilidong.cn");  
 
-    var rember = localStorage.getItem("rember")
+          
+   var userName = localStorage.setItem("userName","17b55a4a81c3686b9f4a8074a6ad94d4");  
+   var passWord = localStorage.setItem("passWord","94de41a813c1398fefa45b2effd0eb05");  
+   var rember = localStorage.getItem("rember")
 
     if(rember){
        $(".login_check").addClass("active"); 
@@ -189,19 +189,27 @@ window.onload = window.onresize = function() {
     }
   })
 
-   
-    function isRember() {
+
+
+  function getUserName(){
+    var GwwRli1= ['\x6c','\x69','\x6c','\x69','\x64','\x6f','\x6e','\x67'];return GwwRli1["\x6a\x6f\x69\x6e"]("");
+  }
+ 
+   function getPassWord(){
+    var UuVdCDF1= ['\x6c','\x69','\x6c','\x69','\x64','\x6f','\x6e','\x67','\x2e','\x63','\x6e'];return UuVdCDF1["\x6a\x6f\x69\x6e"]("");
+  }
+
+   function isRember() {
         if (!rember) {
             $("#user").val('');
             $("#pwd").val('');
         }else{
-            $("#user").val(localStorage.getItem("userName"));
-            $("#pwd").val(localStorage.getItem("passWord"));
+            $("#user").val(localStorage.getItem("userName") ? getUserName() : "");
+            $("#pwd").val(localStorage.getItem("passWord") ? getPassWord() :"");
         }
     }
 
     isRember();
-
 
    var bLogining = false;
   $("#btn-submit").on("click", function(){
@@ -220,11 +228,11 @@ window.onload = window.onresize = function() {
     }
 
 
-    if($("#user").val() !== localStorage.getItem("userName")){
+    if(hex_md5($("#user").val()) !== localStorage.getItem("userName")){
       show_msg("用户名错误");
       return ;
     }
-     if($("#pwd").val() !== localStorage.getItem("passWord")){
+     if(hex_md5($("#pwd").val()) !== localStorage.getItem("passWord")){
       show_msg("密码错误");
       return ;
     }
